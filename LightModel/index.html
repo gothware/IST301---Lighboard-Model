@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Lightboard Model </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div id="container"></div>
+    <script src="script.js"></script>
+    <div style="text-align: center;">
+        <form id="setColor" onsubmit="getVals();return false">
+            <div class="form">
+                <div class="grid-item">
+                    <label for="row">
+                        <p id="label">Row</p>
+                    </label>
+                </div>
+                <div class="grid-item">
+                    <label for="col">
+                        <p id="label">Column</p>
+                    </label>
+                </div>
+                <div class="grid-item">
+                    <p id="label">Color</p>
+                </div>
+                <div class="grid-item">
+                    <input class="text" type="text" id="row" name="row">
+                </div>
+                <div class="grid-item">
+                    <input class="text" type="text" id="col" name="col">
+                </div>
+                <div class="grid-item">
+                    <input type="color" value="#8fbcbb" id="color" name="color">
+                </div>
+            </div>
+            <br>
+
+            <label for="fill" class="checkContainer">Set all dots to selected color? &nbsp;
+                <input type="checkbox" value="yes" id="fill" name="fill">
+                <span class="checkmark"></span>
+            </label>
+            <br>
+
+            <button type="submit" style="border-color: #A3BE8C;" class="fa fa-check fa-2x"></button>
+
+        </form>
+        <br><br>
+        <hr><br>
+
+        <div class="grid">
+            <div class="grid-item">
+                <button type="button" onclick="randTimedLoop(1)" class="fa fa-random fa-2x"
+                    style="width: 80px; border-color: #B48EAD;"></button>
+            </div>
+            <div class="grid-item">
+                <button type="button" onclick="randStarsTimedLoop(1, 'blue')" class="fa fa-magic  fa-2x"
+                    style="width: 80px; border-color: #D08770;"></button>
+            </div>
+            <div class="grid-item">
+                <button type="button" onclick="randFillTimedLoop(1, 'red')" class="fa fa-hourglass-half  fa-2x"
+                    style="width: 80px; border-color: #EBCB8B;"></button>
+            </div>
+            <div class="grid-item">
+                <button type="submit" onclick="window.location.reload();" class="fa fa-stop fa-2x"
+                    style="width: 80px; border-color: #BF616A;"></button>
+            </div>
+        </div>
+        <br><br>
+    </div>
+</body>
+
+</html>
